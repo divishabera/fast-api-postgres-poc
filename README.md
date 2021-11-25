@@ -1,16 +1,20 @@
 # fast-api-postgres-poc
-Pre-reqs to run:
+Pre-reqs to run 👩‍💻:
 1. Create a python virtual environment. Virtual environment give an nice neat isolated environment to run FastAPI.
-
+```
 python3 -m venv venv (this cmd only the first time)
-source venv/bin/activate (everytime you want to launch the venv)
-export PYTHONPATH=$PWD
 
+source venv/bin/activate (everytime you want to launch the venv)
+
+export PYTHONPATH=$PWD
+```
 2. Install postgres
 https://postgresapp.com/ (default settings were used)
 type psql in terminal to confirm it exists (try source ~/.bashrc if not recognizing psql)
+
 also execute:
 python -m pip install psycopg2-binary
+
 Open your `~/.zshrc` file, and *add* the following line:
 ```
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
@@ -27,6 +31,8 @@ The new database should be now showing on the postgres app!
 
 4. Correct the postgres username, password to yours at main.py and docker-compose.yml.
 
+👾👾👾👾👾👾👾👾👾👾👾
+
 
 The api.py exposes Notes. Notes primarily has 3 fields, id, text, completed.
 
@@ -38,15 +44,19 @@ To open swagger just /docs to the URL. Below is a ss.
 
 <h3>2 ways to run this application - without docker and with docker:</h3>
 
-1. 
+1. ✨
+
 ensure postgres has the database and is up and running. Like in pic before
+
 run "pip install -r requirements.txt" This shall install your dependencies
+
 The main.py has been configured to run with Docker, so you need to make some changes in main.py to run without docker. The changes are mentioned in a comment at main.py.
 
 run "python main.py"
 Your application shall be at: http://localhost:8080/
 
-2. 
+2. ✨
+
 docker-compose up --build (first time and anytime you make changes)
 docker-compose up 
 
